@@ -4,7 +4,7 @@ from flask import Flask, request, make_response
 from flask_restful import Api, Resource
 from flask_jwt_extended import jwt_required
 from flask_cors import CORS
-from auth import auth_bp,jwt,allow
+from server.auth import auth_bp,jwt,allow
 from datetime import timedelta
 import os 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
