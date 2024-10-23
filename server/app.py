@@ -16,6 +16,8 @@ CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://matwana_database_user:QKfu63J4VfBIupUphoMfxfB2UdpM5TlI@dpg-csbvb29u0jms73eeutsg-a/matwana_database'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['DEBUG'] = True
+app.config['FLASK_ENV'] = 'development'
 app.config['JWT_SECRET_KEY']='e173db52f146f6d5e957a922'
 app.config['JWT_ACCESS_TOKEN_EXPIRES']=timedelta(hours=2)
 app.config['JWT_REFRESH_TOKEN_EXPIRES']=timedelta(days=3)
