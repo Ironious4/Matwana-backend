@@ -1,4 +1,4 @@
-from app import app  # or however your Flask/Django app is named
+from server.app import app 
 
 if __name__ == "__main__":
     app.run()
