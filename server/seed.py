@@ -1,4 +1,4 @@
-from models import db,User,Parcel,Vehicle,Location,UserParcelAssignment
+from server.models import db,User,Parcel,Vehicle,Location,UserParcelAssignment
 from app import app
 
 with app.app_context():
