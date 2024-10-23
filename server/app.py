@@ -1,4 +1,4 @@
-from models import db,User,Parcel,Vehicle,Location,UserParcelAssignment
+from server.models import db,User,Parcel,Vehicle,Location,UserParcelAssignment
 from flask_migrate import Migrate
 from flask import Flask, request, make_response
 from flask_restful import Api, Resource
