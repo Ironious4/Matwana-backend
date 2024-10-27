@@ -1,10 +1,10 @@
-from server.models import db,User,Parcel,Vehicle,Location,UserParcelAssignment
+from models import db,User,Parcel,Vehicle,Location,UserParcelAssignment
 from flask_migrate import Migrate
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response, jsonify
 from flask_restful import Api, Resource
 from flask_jwt_extended import jwt_required
 from flask_cors import CORS
-from server.auth import auth_bp,jwt,allow
+from auth import auth_bp,jwt,allow
 from datetime import timedelta
 import os 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -14,7 +14,7 @@ DATABASE = os.environ.get(
 app=Flask(__name__)
 CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://matwana_database_user:QKfu63J4VfBIupUphoMfxfB2UdpM5TlI@dpg-csbvb29u0jms73eeutsg-a/matwana_database'
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['DEBUG'] = True
 app.config['FLASK_ENV'] = 'development'
@@ -31,7 +31,8 @@ api=Api(app)
 
 @app.route('/')
 def index():
-    return '<h1>Matwana Logistics</h1>'
+    return jsonify(message="Hello from Flask on Vercel!")
+
 
 ###################################################USER RESOURCE###################################################################
 

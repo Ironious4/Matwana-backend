@@ -1,4 +1,4 @@
-from server.models import User,db,TokenBlocklist
+from models import User,db,TokenBlocklist
 from flask import Blueprint,request,make_response
 from flask_restful import Api, Resource
 from flask_jwt_extended import create_access_token,create_refresh_token,JWTManager,get_jwt,current_user,jwt_required,get_jwt_identity
